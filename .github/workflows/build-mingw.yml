@@ -56,7 +56,7 @@ jobs:
             cd libunistring &&
             g++ --version && 
             ./configure --help &&
-            ./configure --disable-rpath --prefix="$(pwd)/${{ env.installationPath }}" &&
+            ./configure --disable-rpath --enable-relocatable --prefix="$(pwd)/${{ env.installationPath }}" &&
             make install
 
       - name: Archive Release
